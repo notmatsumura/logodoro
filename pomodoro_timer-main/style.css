@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+body.work {
+  background-color: #000;
+  color: #fff;
+}
+
+body.break {
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.toggle-button {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #eee;
+}
+
+#subjectInput {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#phaseLabel {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#timer {
+  font-size: 64px;
+  margin: 20px 0;
+}
+
+.buttons button {
+  margin: 5px;
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+#summary {
+  margin-top: 20px;
+}
+
+/* 設定ブロック */
+#settings {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#settings > div {
+  margin: 10px 0;
+}
+
+#settings button {
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+/* ミュートボタン */
+.mute-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  padding: 8px 12px;
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 480px) {
+  #timer {
+    font-size: 48px;
+  }
+
+  .buttons button {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .mute-btn {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}
+
+/* タイトル共通 */
+.page-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* ⇔ Study Log リンク（全体オレンジ） */
+.link-orange {
+  font-size: 24px;
+  text-decoration: none;
+  color: #ff8c00;
+}

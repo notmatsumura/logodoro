@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="work">
+    <h1 class="page-title">Pomodoro Timer</h1>
+    <p>
+      <a href="../study_log-main/index.html" class="link-orange">⇔ Study Log</a>
+    </p>
+
+    <div class="container">
+      <input type="text" id="subjectInput" placeholder="学習内容（例：英語）" />
+      <div id="phaseLabel">作業中</div>
+      <div id="timer">25:00</div>
+      <div class="buttons">
+        <button id="startPauseBtn">スタート</button>
+        <button id="resetBtn">リセット</button>
+        <button id="testBtn">1秒で終了</button>
+      </div>
+
+      <div id="summary">
+        <p>今日の作業回数: <span id="workCount">0</span></p>
+        <p>今日の勉強時間: <span id="totalMinutes">0</span>分</p>
+      </div>
+
+      <div id="settings">
+        <div>
+          作業時間
+          <button id="decreaseWork">◀</button>
+          <span id="workMinutes">25</span>
+          <button id="increaseWork">▶</button>
+        </div>
+        <div>
+          休憩時間
+          <button id="decreaseBreak">◀</button>
+          <span id="breakMinutes">5</span>
+          <button id="increaseBreak">▶</button>
+        </div>
+      </div>
+
+      <button id="muteToggle">ミュートする：🔈</button>
+    </div>
+
+    <audio id="notificationSound" src="notification.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf0;
+  padding: 20px;
+  margin: 0;
+  color: #333;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #ff8c00;
+}
+
+/* 入力欄とボタンの基本デザイン */
+input,
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* ボタン共通スタイル */
+button {
+  cursor: pointer;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #e67e00;
+}
+
+/* 記録リストのスタイル */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 記録削除ボタン */
+li button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: darkred;
+}
+
+/* 全て削除ボタン */
+.clear-btn {
+  background-color: red;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: darkred;
+}
+
+/* グラフエリア */
+canvas {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 20px auto 10px;
+  display: block;
+  max-width: 100%;
+}
+
+/* グラフ切り替えアイコン */
+.view-icon {
+  font-size: 18px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* 日付切り替えナビゲーション */
+.date-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-nav .arrow {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* ⇔ ボタンのサイズ・配置（中央上部） */
+button[onclick="toggleApp()"] {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+
+/* グラフの最大サイズ制限（PC向け） */
+@media (min-width: 768px) {
+  canvas {
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+/* タイトル共通 */
+.page-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* ⇔ Pomodoro Timer リンク（全体黒） */
+.link-black {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}

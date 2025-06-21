@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Log</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="page-title" style="color: #ff8c00">Study Log</h1>
+    <p>
+      <a href="../pomodoro_timer-main/index.html" class="link-black"
+        >⇔ Pomodoro Timer</a
+      >
+    </p>
+
+    <input type="date" id="date" />
+    <input type="text" id="subject" placeholder="科目（例：英語）" />
+    <input type="number" id="time" placeholder="時間（分）" />
+    <button onclick="saveRecord()">記録</button>
+
+    <h2>学習時間</h2>
+    <div id="date-nav" class="date-nav">
+      <span id="prev-day" class="arrow">←</span>
+      <h2 id="current-date-label">6/18</h2>
+      <span id="next-day" class="arrow">→</span>
+    </div>
+    <div class="view-switch">
+      <span id="view-daily" class="view-icon">⇔1日</span>
+      <span id="view-weekly" class="view-icon">⇔1週間</span>
+    </div>
+
+    <canvas id="dailyChart" width="400" height="400"></canvas>
+    <canvas
+      id="weeklyChart"
+      width="400"
+      height="400"
+      style="display: none"
+    ></canvas>
+
+    <h2>記録一覧</h2>
+    <ul id="log"></ul>
+
+    <button onclick="clearRecords()" class="clear-btn">全て削除</button>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
