@@ -1,4 +1,4 @@
-https://notmatsumura.github.io/logodoro/
+(https://notmatsumura.github.io/logodoro_log-pomodoro/)
 
 ・logodoro（ロゴドーロ）
 logodoro は、
