@@ -17,7 +17,7 @@
     <input type="date" id="date" />
     <input type="text" id="subject" placeholder="科目（例：英語）" />
     <input type="number" id="time" placeholder="時間（分）" />
-    <button onclick="saveRecord()">記録</button>
+    <button onclick="saveRecord()">手動で記録を追加</button>
 
     <h2>学習時間</h2>
     <div id="date-nav" class="date-nav">
@@ -26,8 +26,8 @@
       <span id="next-day" class="arrow">→</span>
     </div>
     <div class="view-switch">
-      <span id="view-daily" class="view-icon">⇔1日</span>
-      <span id="view-weekly" class="view-icon">⇔1週間</span>
+      <span id="view-daily" class="view-icon">1日の記録</span>
+      <span id="view-weekly" class="view-icon">1週間の記録</span>
     </div>
 
     <canvas id="dailyChart" width="400" height="400"></canvas>
