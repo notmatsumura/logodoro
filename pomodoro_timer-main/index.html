@@ -3,59 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pomodoro Timer</title>
+    <title>Logodoro - 集中 × 記録</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="work">
-    <h1 class="page-title">Pomodoro Timer</h1>
-    <p style="font-size: 16px; color: #ccc; margin-top: -10px">
-      集中と休憩を繰り返して、やる気をキープ！
-    </p>
-    <p>
-      <a href="../study_log-main/index.html" class="link-orange"
-        >⇔ 学習記録確認へ</a
-      >
-    </p>
+    <h1 class="page-title">pomodoro timer</h1>
+    <button id="tutorialBtn">初めての方へ（使い方を見る）</button>
 
-    <div class="container">
-      <input type="text" id="subjectInput" placeholder="学習内容（例：英語）" />
-      <p style="font-size: 14px; color: #ccc; margin-bottom: 10px">
-        ※タイマーが0になると、学習記録に自動で記録されます
-      </p>
-
-      <div id="phaseLabel">作業中</div>
-      <div id="timer">25:00</div>
-      <div class="buttons">
-        <button id="startPauseBtn">スタート</button>
-        <button id="resetBtn">リセット</button>
-        <button id="testBtn">残り1秒にする</button>
-        <p style="font-size: 12px; color: #999">
-          ※残り1秒にする：動作確認用のテストボタンです
-        </p>
-      </div>
-
-      <div id="summary">
-        <p>今日の作業回数: <span id="workCount">0</span></p>
-        <p>今日の勉強時間: <span id="totalMinutes">0</span>分</p>
-      </div>
-
-      <div id="settings">
-        <div>
-          作業時間
-          <button id="decreaseWork">◀</button>
-          <span id="workMinutes">25</span>
-          <button id="increaseWork">▶</button>
-        </div>
-        <div>
-          休憩時間
-          <button id="decreaseBreak">◀</button>
-          <span id="breakMinutes">5</span>
-          <button id="increaseBreak">▶</button>
+    <div id="tutorialModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <img id="tutorialImage" src="Slide1.jpg" alt="チュートリアル" />
+        <div class="modal-controls">
+          <button id="nextSlide">次へ</button>
         </div>
       </div>
-
-      <button id="muteToggle">ミュートする：🔈</button>
     </div>
+
+    <p class="intro">入力した学習内容は、タイマー終了後に自動記録されます。</p>
+
+    <div id="phaseLabel">作業中</div>
+
+    <div id="timer">25:00</div>
+
+    <input
+      type="text"
+      id="subjectInput"
+      placeholder="学習内容（例：英語、数学の課題など）"
+    />
+
+    <div class="buttons">
+      <button id="startPauseBtn">スタート</button>
+      <button id="resetBtn">リセット</button>
+      <button id="testBtn">残り1秒にする</button>
+    </div>
+    <p style="font-size: 12px; color: #999">
+      ※残り1秒にする：動作確認用のテストボタンです
+    </p>
+
+    <div id="summary">
+      <p>今日の作業回数: <span id="workCount">0</span></p>
+      <p>今日の勉強時間: <span id="totalMinutes">0</span>分</p>
+    </div>
+
+    <div style="margin-top: 30px">
+      <a href="../study_log-main/index.html" class="link-orange"
+        >⇔ 学習記録を確認する</a
+      >
+      <p style="font-size: 12px; color: #aaa">
+        ※記録画面には、このタイマーで記録された内容が反映されます。
+      </p>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc" />
+
+    <div id="settings">
+      <h3>時間設定</h3>
+      <div>
+        作業時間：
+        <button id="decreaseWork">◀</button>
+        <span id="workMinutes">25</span>分
+        <button id="increaseWork">▶</button>
+      </div>
+      <div>
+        休憩時間：
+        <button id="decreaseBreak">◀</button>
+        <span id="breakMinutes">5</span>分
+        <button id="increaseBreak">▶</button>
+      </div>
+    </div>
+
+    <button id="muteToggle">ミュートする：🔈</button>
 
     <audio id="notificationSound" src="notification.mp3" preload="auto"></audio>
     <script src="script.js"></script>

@@ -166,3 +166,43 @@ function saveToStudyLog(subject, minutes) {
 
 // 初期化
 updateDisplay();
+
+// チュートリアル画像一覧
+const slides = ["Slide1.jpg", "Slide2.jpg", "Slide3.jpg", "Slide4.jpg"];
+let currentSlide = 0;
+
+// 要素取得
+const tutorialBtn = document.getElementById("tutorialBtn");
+const tutorialModal = document.getElementById("tutorialModal");
+const tutorialImage = document.getElementById("tutorialImage");
+const nextSlideBtn = document.getElementById("nextSlide");
+const closeModalBtn = document.getElementById("closeModal");
+
+// チュートリアル表示
+tutorialBtn.addEventListener("click", () => {
+  currentSlide = 0;
+  tutorialImage.src = slides[currentSlide];
+  tutorialModal.style.display = "block";
+});
+
+// 次へ
+nextSlideBtn.addEventListener("click", () => {
+  currentSlide++;
+  if (currentSlide < slides.length) {
+    tutorialImage.src = slides[currentSlide];
+  } else {
+    tutorialModal.style.display = "none";
+  }
+});
+
+// 閉じる
+closeModalBtn.addEventListener("click", () => {
+  tutorialModal.style.display = "none";
+});
+
+// 背景クリックで閉じる
+window.addEventListener("click", (e) => {
+  if (e.target === tutorialModal) {
+    tutorialModal.style.display = "none";
+  }
+});
